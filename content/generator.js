@@ -7,6 +7,7 @@ exports.get20Matches = function (argument) {
 	mongo.getCharitiesFromPC.then(charities => {
 		var top20Matches = [];
 		//add top 20-ratio*20 charities
+		charities = charities['charities']
 		for(var i=0;i<20-parseInt(ratio*20);i++){
 			top20Matches.push(charities[i]);
 		} 

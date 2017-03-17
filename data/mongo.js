@@ -24,7 +24,7 @@ exports.connectDB = function(){
 
 exports.getCharitiesFromPC = function(postal_code){
 	return exports.connectDB().then(db => {
-		return db.collection("charitiesByPC").find_one({"postal_code":postal_code});
+		return db.collection("charitiesByPC").find_one({"postal_code":postal_code}).then(succ =>{return succ;});
 	});
 }
 
