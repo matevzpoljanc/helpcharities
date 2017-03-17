@@ -62,7 +62,9 @@ a {
 }
 
 .faded {
-	opacity:0.1;
+	transition: opacity 0.2s;
+	opacity:0.2;
+	pointer-events: none;
 }
 
 .card-max {

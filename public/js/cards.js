@@ -150,6 +150,8 @@
 		var currentItem = this.items[this.current];
 		classie.remove(currentItem, 'stack__item--current');
 
+		var nextItem = this.items[this.current + 1];
+
 		// add animation class
 		classie.add(currentItem, action === 'accept' ? 'stack__item--accept' : 'stack__item--reject');
 
@@ -165,15 +167,15 @@
 			var score = (action == "accept") ? 1 : 0;
 			var parameters = {id: currentItem.data_id, value: score};
 
-			console.log(parameters);
+			console.log(nextItem.id);
 
 			$.get('/rate', parameters, function(data) {
 		    	// Response from the get 
 		    });
 
 
-			if (currentItem.id == "card-final") {
-				var options = document.getElementById()
+			if (nextItem.id == "card-final") {
+				$("#controls").addClass("faded");
 			}
 
 			/*
