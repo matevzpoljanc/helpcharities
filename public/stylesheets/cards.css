@@ -56,8 +56,8 @@ Pulse animation for the bottom buttons.
     pointer-events: none;
 }
 
-.stack__item {
-
+.card {
+	
 	padding:5rem;
 	background: #ED6A5A;
 
@@ -67,10 +67,11 @@ Pulse animation for the bottom buttons.
 	border-radius: 4px;
 	text-align: left;
 	overflow: hidden;
+	
 	position: absolute;
-	opacity: 0;
 	display: -webkit-flex;
 	display: flex;
+
 	-webkit-flex-direction: column;
 	flex-direction: column;
 	-webkit-touch-callout: none;
@@ -83,6 +84,13 @@ Pulse animation for the bottom buttons.
 
 }
 
+.card-final {
+	font-weight:normal;
+	background: none;
+	 -webkit-box-shadow:inset 0px 0px 0px 3px #000;
+    -moz-box-shadow:inset 0px 0px 0px 3px #000;
+    box-shadow:inset 0px 0px 0px 3px #000;
+}
 
 .controls {
 	position: relative;
@@ -122,6 +130,7 @@ Pulse animation for the bottom buttons.
 
 .button, .button:hover, .button:active, .button:focus {
 	color: #fff;
+	outline:0;
 }
 
 

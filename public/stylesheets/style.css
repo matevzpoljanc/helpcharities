@@ -6,7 +6,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	font-size: 28px;
 	background: #F4F1BB;
-  	padding: 50px;
+	padding:4rem 0;
 }
 
 h1 {
@@ -18,6 +18,18 @@ a {
   color: #00B7FF;
 }
 
+.content {
+	margin-top:5rem;
+}
+
+.overlay {
+	position:fixed;
+	top:0;
+	background:rgba(0,0,0,0.7);
+	min-height: 100%;
+	min-width: 100%;
+	z-index:1000;
+}
 
 .color-1 {
 	background: #ED6A5A;
@@ -29,4 +41,32 @@ a {
 
 .color-3 {
 	background: #9BC1BC;
+}
+
+.icon-center {
+	text-align: center;
+	margin:1rem auto 2rem;
+
+}
+.card-large-holder {
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	padding: 5% 10%;
+
+}
+
+.hide {
+	display: none;
+	opacity: 0;
+}
+
+.faded {
+	opacity:0.1;
+}
+
+.card-max {
+	overflow: scroll;
+	width:100%;
+	height:100%;
 }

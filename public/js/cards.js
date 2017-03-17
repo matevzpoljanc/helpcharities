@@ -156,7 +156,26 @@
 		var self = this;
 		onEndAnimation(currentItem, function() {
 			// reset current item
-			
+				
+			/*
+
+			Custom operations to handle the add
+
+			*/
+			var score = (action == "accept") ? 1 : 0;
+			var parameters = {id: currentItem.data_id, value: score};
+
+			console.log(parameters);
+
+			$.get('/rate', parameters, function(data) {
+		    	// Response from the get 
+		    });
+
+
+			if (currentItem.id == "card-final") {
+				var options = document.getElementById()
+			}
+
 			/*
 			currentItem.style.opacity = 0;
 			currentItem.style.pointerEvents = 'none';
