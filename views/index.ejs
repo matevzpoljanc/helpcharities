@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include snippets/head %>
+
+<h1>Charity Help</h1>
+
+<form action="choose" method="POST">
+	
+	<label for="type">I want to</label>
+	<input type="text" name="type" />
+	<label for="type">in the area</label>
+	<input type="text" name="location" />
+
+	<input type="submit" value="Search" class="button" />
+</form>
+
+<% include snippets/footer %>
