@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET home page. */
 router.get('/choose', function(req, res, next) {
-  res.render('choose', {});
+  res.render('error', {});
 });
 
 /* GET home page. */
