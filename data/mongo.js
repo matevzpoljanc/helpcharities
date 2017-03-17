@@ -24,13 +24,13 @@ exports.connectDB = function(){
 
 exports.getCharitiesFromPC = function(postal_code){
 	return exports.connectDB().then(db => {
-		return db.collection("charitiesByPC").find_one({"postal_code":postal_code}).then(succ =>{return succ;});
+		return db.collection("charitiesByPC").findOne({"pc":postal_code});
 	});
 }
 
-exports.getCharityByID = function(id){
+exports.getCharityByRegNO = function(id){
 	return exports.connectDB().then(db => {
-		return db.collection("charities").find_one({"_id":new ObjectId(id)});
+		return db.collection("charities").findOne({"regno":id});
 	});
 }
 
@@ -39,6 +39,5 @@ exports.updateUserRating = function(id,value){
 		var rating = charity.rating + value;
 		var score = rating * factor_for_rating + charity.income * factor_for_income;
 		return collection("charities").update({'_id':new ObjectId(id)},{"$set": {"rating": rating}},{"$set": {"score": score}})
-		.then(r => {return true;}})
-	});
+		.then(r => {return true;})});
 }
