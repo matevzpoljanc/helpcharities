@@ -1,0 +1,44 @@
+<% include snippets/head %>
+
+<div class="heading-box">
+	<h1 class="center-header">Charity Help</h1>
+	<p>Find out about charities in your local areas and get involved.</p>
+</div>
+
+<div class="card-box-holder">
+    <ul id="stack_krisna" class="stack stack--krisna">
+		<li class="stack__item card card-top">
+			<form action="choose" method="GET" class="search-form">
+		        <label for="type">I want to</label>
+		        <input type="text" name="type" />
+		        <label for="type">in the area</label>
+		        <input type="text" id="location" name="location" />
+		        <br/>
+
+		        <input type="submit" value="Search" class="button" />
+	    	</form>
+		</li>
+
+		<li class="stack__item card color-2 stack__item--reject">
+			<h2>Computer Lab Support in Cambridge</h2>
+			<p>Help for struggling computer science students in Cambridge.</p>
+		</li>
+	
+		<li class="stack__item card color-3 stack__item--accept">
+			<img src="images/heart.png" width="50" class="icon-center" />
+			<h2>Great! Now take a look at the charities you have selected.</h2>
+
+			<a href="/results" class="button">Results</a>
+		</li>
+	</ul>
+</div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js"/>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrDZPrvXxV0Smsm0PRpWBUFSaYwGBJZuM&callback=geocodeLatLng">
+</script>
+<script src="js/locator.js">
+</script>
+
+<% include snippets/footer %>
