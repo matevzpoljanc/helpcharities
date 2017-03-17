@@ -147,6 +147,14 @@ Pulse animation for the bottom buttons.
 	background: #e66868;
 }
 
+.center-header {
+	text-align: center;
+}
+
+input {
+	font-size: 20px;
+}
+
 
 /* Animations */
 .stack__item--reject,

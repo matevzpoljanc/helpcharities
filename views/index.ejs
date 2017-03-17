@@ -1,15 +1,26 @@
 <% include snippets/head %>
 
-<h1>Charity Help</h1>
+<h1 class="center-header">Charity Help</h1>
 
 <form action="choose" method="POST">
-	
-	<label for="type">I want to</label>
-	<input type="text" name="type" />
-	<label for="type">in the area</label>
-	<input type="text" name="location" />
+    <ul id="stack_krisna" class="stack stack--krisna">
+        <li class="stack__item color-1">
+            <label for="type">I want to</label>
+            <input type="text" name="type" />
+            <label for="type">in the area</label>
+            <input type="text" id="location" name="location" />
+            <br/>
+            <input type="submit" value="Search" class="button" />
+        </li>
+    </ul>
 
-	<input type="submit" value="Search" class="button" />
+
 </form>
+<script src="https://maps.googleapis.com/maps/api/js"/>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrDZPrvXxV0Smsm0PRpWBUFSaYwGBJZuM&callback=geocodeLatLng">
+</script>
+<script src="js/locator.js">
+</script>
 
 <% include snippets/footer %>
