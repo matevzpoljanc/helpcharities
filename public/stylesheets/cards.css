@@ -89,7 +89,7 @@ Pulse animation for the bottom buttons.
 }
 
 .card-grid {
-	margin-bottom:4rem;
+	margin-bottom:0rem !important;
 }
 
 .card-holder {
@@ -222,6 +222,26 @@ input {
 	}
 }
 
+.stack--krisna .stack__item--reject-small {
+	-webkit-animation: krisnaRejectSmall 0.5s forwards;
+	animation: krisnaRejectSmall 0.5s forwards;
+}
+
+@-webkit-keyframes krisnaRejectSmall {
+	to {
+		-webkit-transform: translate3d(-5vw,0,0) translate3d(-60%,0,0) rotate3d(0,0,1,-15deg);
+		transform: translate3d(-5vw,0,0) translate3d(-60%,0,0) rotate3d(0,0,1,-15deg);
+	}
+}
+
+@keyframes krisnaRejectSmall {
+	to {
+		-webkit-transform: translate3d(-5vw,0,0) translate3d(-60%,0,0) rotate3d(0,0,1,-15deg);
+		transform: translate3d(-5vw,0,0) translate3d(-60%,0,0) rotate3d(0,0,1,-15deg);
+	}
+}
+
+
 .stack--krisna .stack__item--accept {
 	-webkit-animation: krisnaAccept 0.5s forwards;
 	animation: krisnaAccept 0.5s forwards;
@@ -240,6 +260,27 @@ input {
 		transform: translate3d(25vw,0,0) translate3d(60%,0,0) rotate3d(0,0,1,5deg);
 	}
 }
+
+
+.stack--krisna .stack__item--accept-small {
+	-webkit-animation: krisnaAcceptSmall 0.5s forwards;
+	animation: krisnaAcceptSmall 0.5s forwards;
+}
+
+@-webkit-keyframes krisnaAcceptSmall {
+	to {
+		-webkit-transform: translate3d(5vw,0,0) translate3d(60%,0,0) rotate3d(0,0,1,15deg);
+		transform: translate3d(5vw,0,0) translate3d(60%,0,0) rotate3d(0,0,1,15deg);
+	}
+}
+
+@keyframes krisnaAcceptSmall {
+	to {
+		-webkit-transform: translate3d(5vw,0,0) translate3d(60%,0,0) rotate3d(0,0,1,15deg);
+		transform: translate3d(5vw,0,0) translate3d(60%,0,0) rotate3d(0,0,1,15deg);
+	}
+}
+
 
 /* ...when content has 100% viewport width */
 @media screen and (max-width: 60em) {

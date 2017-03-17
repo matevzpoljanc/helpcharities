@@ -4,39 +4,71 @@
 
 
 <div class="container">
-	<div class="row">
-		<div class="one-half column">
+
+	<div class="grid">
+	  	<div class="grid-item grid-item--width2">
+	  		<div class="card-grid card-color-none" style="padding:20px">
+				<h1>Get involed in these charities</h1>
+				<p>Find out more information about these charities and get involved.</p>
+				<a href="/" class="button">
+				<img src="images/return.png" width="30" class="button-icon"/>Restart</a>
+			</div>
+		</div>
 		
-		<div class="card-grid card-color-none">
-			<h1>Get involed in these charities</h1>
-			<p>Find out more information about these charities and get involved.</p>
-			<a href="/" class="button">
-			<img src="images/return.png" width="30" class="button-icon"/>Restart</a>
-		</div>
-			<div class="card card-grid">
-				<h2>Cambridge Homeless Help</h2>
-				<p>A great page to find out all about the homeless people and how you can help out.</p>
-
-			</div>
-			<div class="card card-grid color-3">
-				<h2>Great! Now take a look at the charities you have selected.</h2>
-
-			</div>
-		</div>
-		<div class="one-half column">
+		<div class="grid-item grid-item--width2">
 			<div class="card card-grid color-2">
-				<h2>Great! Now take a look at the charities you have selected.</h2>
+				<h2>Help the Homeless</h2>
+				<p>A charity which provides help and support for homeless people in the local community.</p>
 
-			</div>
-			<div class="card card-grid color-1">
-				<h2>Great! Now take a look at the charities you have selected.</h2>
-
+				<ul class="data-box">
+					<li>Local Charity</li>
+					<li>Founded in 2003</li>
+					<li>1600 members</li>
+					<li><a href="#">http://helphomeless.com</a></li>
+				</ul>
 			</div>
 		</div>
+
+	 	<div class="grid-item grid-item--width2">
+			<div class="card card-grid color-3">
+				<h2>Shelter</h2>
+				<p>Providing shelter to people on the streets in Cambridge.</p>
+
+				<ul class="data-box">
+					<li>Local Charity</li>
+					<li>Founded in 2010</li>
+					<li>160 members</li>
+					<li><a href="#">http://shelter.com</a></li>
+				</ul>
+			</div>
+		</div>
+	  
+	  	<div class="grid-item grid-item--width2">
+			<div class="card card-grid">
+				<h2>Provide Food</h2>
+				<p>Giving food to people in need in the local Cambridge area.</p>
+
+				<ul class="data-box">
+					<li>Local Charity</li>
+					<li>Founded in 2000</li>
+					<li>30 members</li>
+					<li><a href="#">http://providefood.com</a></li>
+				</ul>
+			</div>
+		</div>
+	 
 	</div>
 </div>
 
+<script src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+<script>
 
-<script type="text/javascript" src="js/masonry.pkgd.min.js">
+$('.grid').masonry({
+  // set itemSelector so .grid-sizer is not used in layout
+  itemSelector: '.grid-item',
+  percentPosition: true
+});
 
+</script>
 <% include snippets/footer %>

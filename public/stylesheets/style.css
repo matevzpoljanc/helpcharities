@@ -66,6 +66,38 @@ label {
 	font-size:3rem;
 }
 
+.grid-item--width2 {
+	float: left;
+	width:45%;
+	margin:10px;
+}
+
+.data-box, .data-box li {
+	margin:0 !important;
+}
+
+a, a:hover, a:active {
+  color: black;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+input[type=text],
+input[type=text]:active,
+input[type=text]:focus
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
 input[type=text] {
 	 border: none;
     overflow: auto;
